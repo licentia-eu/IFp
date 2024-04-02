@@ -1,4 +1,4 @@
-10265691182269
+20534715444271
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2526,6 +2526,27 @@ speaker CUI
 0
 2
 2
+CD74AC04E
+DIP794W53P254L1930H508Q14N
+PDIP
+Integrated Circuit
+0
+14
+14
+CD4072BE
+DIP794W53P254L1930H508Q14N
+N (R-PDIP-T)
+Integrated Circuit
+0
+14
+14
+CD4077BE
+DIP794W53P254L1930H508Q14N
+N(R-PDIP-T**)
+Integrated Circuit
+0
+14
+14
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
 Gauge, Massstab, 10mm, CopperTop, Type 1,
@@ -87184,6 +87205,27 @@ rotary encoder
 0
 7
 6
+SN74LS00NE4
+DIP794W53P254L1930H508Q14N
+N (R-PDIP-T14)
+Integrated Circuit
+0
+14
+14
+SN74LS08N
+DIP794W53P254L1930H508Q14N
+N (R-PDIP-T14)
+Integrated Circuit
+0
+14
+14
+SN74LVC245ANE4
+DIP794W53P254L2540H508Q20N
+N (R-PDIP-T20)
+Integrated Circuit
+0
+20
+20
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf

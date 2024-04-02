@@ -18,23 +18,24 @@
 // Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 // -----------------------------------------------------------------------------
 
-.define public I_RP_EN_L    29      // 0 when RP2040 should handle the bus
-.define public O_ROMCS_L    25      // 0 when RP2040 should serve ROM
+.define public B_ADDR_BASE  0       // Base pin number for address bus
 .define public I_MREQ_L     14      // 0 when we have a MREQ 1 when we have a IOREQ
 .define public I_RD_L       15      // 0 when we have a RD 1 when we have a WR
-.define public O_WAIT_L     24      // 0 when we have zx has to wait
-.define public O_OE_L       26      // 1 when we have disable DATA level shifter and we can use GPIOs 16 to 23 for other purposes (e.g. SPI)
-.define public B_ADDR_BASE  0       // Base pin number for address bus
+
 .define public B_DATA_BASE  16      // Base pin number for data bus
+
+.define public O_WAIT_L     24      // 0 when we have zx has to wait
+.define public O_ROMCS_L    25      // 0 when RP2040 should serve ROM
+.define public O_OE_L       26      // 1 when we have disable DATA level shifter and we can use GPIOs 16 to 23 for other purposes (e.g. SPI)
+.define public I_M1_L       27      // 0 when we have a M1
+.define public I_CPM_L      28      // 0 when we have a CP/M
+.define public I_RP_EN_L    29      // 0 when RP2040 should handle the bus
 
 .program zx
 .side_set 1
 .wrap_target
     wait 0 gpio I_RP_EN_L side 1        // wait for the /RP_EN pin to be low
-
     in pins, 24 side 0                  // send ADDR & DATA bus to C++ word
-                                        // and wait for 2 cycles to give time
-                                        // to the zx_data_dir program to set the data pins
     out pins, 8 side 0                  // set DATA from C++ world
     out pindirs, 8 side 0               // enable output
     wait 1 gpio I_RP_EN_L side 1        // wait for the /RP_EN pin to go high

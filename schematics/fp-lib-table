@@ -4,4 +4,5 @@
   (lib (name "zxedge")(type "KiCad")(uri "${KIPRJMOD}/zxedge.pretty")(options "")(descr ""))
   (lib (name "pico-foot")(type "KiCad")(uri "${KIPRJMOD}/KiCad-RP-Pico/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.pretty")(options "")(descr ""))
   (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KIPRJMOD}/KiCad-RP-Pico/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.pretty")(options "")(descr ""))
+  (lib (name "mouser")(type "KiCad")(uri "${KIPRJMOD}/mouser.pretty")(options "")(descr ""))
 )

@@ -4,4 +4,5 @@
   (lib (name "rp-pico")(type "Legacy")(uri "${KIPRJMOD}/rp-pico.lib")(options "")(descr ""))
   (lib (name "pico-sym")(type "KiCad")(uri "${KIPRJMOD}/KiCad-RP-Pico/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.kicad_sym")(options "")(descr ""))
   (lib (name "pmbt2222a")(type "KiCad")(uri "${KIPRJMOD}/pmbt2222a.kicad_sym")(options "")(descr ""))
+  (lib (name "RP2040-PICO30-sym")(type "KiCad")(uri "${KIPRJMOD}/RP2040-PICO30-sym.kicad_sym")(options "")(descr ""))
 )
