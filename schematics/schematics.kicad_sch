@@ -5542,6 +5542,17 @@
 		)
 		(uuid "e2d25d0b-3365-4ee6-aa93-d0573068596b")
 	)
+	(label "unused"
+		(at 139.7 180.34 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "49b4653d-7caf-4faa-acf8-1a97fad39023")
+	)
 	(global_label "~{ZX_M_IO_REQ}"
 		(shape output)
 		(at 90.17 157.48 180)
@@ -7852,7 +7863,7 @@
 			)
 		)
 	)
-	(global_label "~{DATA_OE}"
+	(global_label "~{OE}"
 		(shape input)
 		(at 58.42 114.3 0)
 		(fields_autoplaced yes)
@@ -7864,7 +7875,7 @@
 		)
 		(uuid "c3e09e71-8fd3-4ae1-8a87-4d0a028dc573")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.2671 114.3 0)
+			(at 63.8847 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
