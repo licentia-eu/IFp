@@ -58,6 +58,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_link_libraries(${CMAKE_PROJECT_NAME}
     # SdFat
     hardware_pio
+    hardware_adc
     pico_stdlib
     pico_multicore
 )
