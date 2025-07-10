@@ -1,7 +1,0 @@
-# Generated files
-build/
-
-# IDE specific files
-.vscode/
-*.txt.user
-

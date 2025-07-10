@@ -1,0 +1,50 @@
+.define public PIO_BASE     16
+
+.define public B_DATA_BASE  (16 - PIO_BASE)       // Base pin number for data bus
+
+.define public DONT_USE     (24 - PIO_BASE)       // Used by SD/MMC
+
+.define public O_BASE       (25 - PIO_BASE)
+.define public O_SIZE       2
+
+.define public O_WAIT_L     (26 - PIO_BASE)       // 0 when zx has to wait
+
+.define public I_BASE       (27 - PIO_BASE)
+.define public I_SIZE       5
+.define public I_ZXRDWR     (27 - PIO_BASE)       // 1 when either RD or WR is active
+.define public I_MREQ_L     (28 - PIO_BASE)       // 0 when we have a MREQ
+.define public I_IORQ_L     (29 - PIO_BASE)       // 0 when we have a IOREQ
+.define public I_RD_L       (30 - PIO_BASE)       // 0 when we have a RD
+.define public I_WR_L       (31 - PIO_BASE)       // 0 when we have a WR
+
+.define public I_ADDR_BASE  (32 - PIO_BASE)       // Base pin number for address bus
+.define public I_ADDR_SIZE  16
+
+.program zx_mreq
+.side_set 1 opt
+.wrap_target
+again:
+    wait 0 pin I_MREQ_L                 // wait for the /MREQ pin to be low
+    in pins, 32            side 0       // send entire bus to C++ world
+    wait 1 pin I_ZXRDWR                 // wait for the RD/WR pin to go high
+    jmp pin, send_data                  // send data from C++ world to bus
+    out null, 24           side 1       // discard the C++ data
+    jmp again                           // loop again
+send_data:
+    out pins, 8                         // sets DATA BUS from C++ world
+    out pindirs, 8                      // enable the output
+    wait 1 pin I_MREQ_L     side 1      // wait for the /MREQ pin to go high
+    out pindirs, 8                      // disable output
+.wrap
+
+.program zx_iorq
+.side_set 1 opt
+.wrap_target
+    wait 0 pin I_IORQ_L                 // wait for the /IOREQ pin to be low
+    wait 1 pin I_ZXRDWR                 // wait for the RD/WR pin to go high
+    in pins, 32                         // send entire bus to C++ word
+    out pins, 8             side 0      // sets DATA BUS from C++ world
+    out pindirs, 8                      // enable the output
+    wait 1 pin I_IORQ_L     side 1      // wait for the /IOREQ pin to go high
+    out pindirs, 8                      // disable output
+.wrap
