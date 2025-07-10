@@ -9520,18 +9520,6 @@
 		)
 		(uuid "0bd34047-5f9b-404a-a86f-ba0aa6d8bc3d")
 	)
-	(label "~{ZXNMI}"
-		(at 114.3 80.01 0)
-		(effects
-			(font
-				(size 1.397 1.397)
-				(thickness 0.3048)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "1010d6ff-a758-4286-8a6b-7011de40eb64")
-	)
 	(label "GPIO24\\SPI1_RX\\SD_DAT0"
 		(at 154.94 69.85 0)
 		(effects
@@ -9544,7 +9532,7 @@
 		)
 		(uuid "196dc3a3-eb46-4bfa-9471-7504949cda69")
 	)
-	(label "GPIO5\\SPI0_CSn(CS#)"
+	(label "GPIO5"
 		(at 114.3 57.15 0)
 		(effects
 			(font
@@ -9602,18 +9590,6 @@
 		)
 		(uuid "35bc7452-3c65-4054-8870-b10a71e11f1c")
 	)
-	(label "GPIO2\\I2C1_SDA"
-		(at 114.3 49.53 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.3048)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "36067f61-f5cf-4380-9728-0ecfa9871e60")
-	)
 	(label "QSPI_CLK"
 		(at 220.98 80.01 0)
 		(effects
@@ -9638,7 +9614,7 @@
 		)
 		(uuid "3ff91f4c-30ce-4a7b-b5b3-34c896ce002f")
 	)
-	(label "GPIO7\\SPI0_TX(MOSI)"
+	(label "GPIO7"
 		(at 114.3 62.23 0)
 		(effects
 			(font
@@ -9841,6 +9817,18 @@
 		)
 		(uuid "685b64af-675f-4b86-ba80-77e03e9b6c27")
 	)
+	(label "GPIO12\\SPI1_RX\\SD_DAT0"
+		(at 114.3 80.01 0)
+		(effects
+			(font
+				(size 1.397 1.397)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "6884eb71-2826-4371-ae6d-42c653fc7f94")
+	)
 	(label "ZXA2"
 		(at 266.7 49.53 180)
 		(effects
@@ -9899,7 +9887,7 @@
 		)
 		(uuid "7b7b4483-e6bd-4827-8a28-bb59848d7525")
 	)
-	(label "GPIO4\\SPI0_RX(MISO)"
+	(label "GPIO4"
 		(at 114.3 54.61 0)
 		(effects
 			(font
@@ -9911,7 +9899,7 @@
 		)
 		(uuid "7c4bdd04-558b-4c20-80f1-5ec636dacd16")
 	)
-	(label "GPIO3\\I2C1_SCL"
+	(label "GPIO3"
 		(at 114.3 52.07 0)
 		(effects
 			(font
@@ -10210,7 +10198,7 @@
 		)
 		(uuid "d32feb86-9732-4521-8e4d-ae4a18819c85")
 	)
-	(label "GPIO6\\SPI0_SCK(SCK)"
+	(label "GPIO6"
 		(at 114.3 59.69 0)
 		(effects
 			(font
@@ -10301,6 +10289,18 @@
 			(justify left bottom)
 		)
 		(uuid "f571ef9d-b357-4b68-ab89-16bbd2976e34")
+	)
+	(label "~{ZXNMI}"
+		(at 114.3 49.53 0)
+		(effects
+			(font
+				(size 1.397 1.397)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9e810e6-ab7f-47ee-8745-2de92a650320")
 	)
 	(label "ZXRDWR"
 		(at 162.56 77.47 0)
